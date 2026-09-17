@@ -1,5 +1,5 @@
 // App-shell cache. Data (tiles, parcels) lives in IndexedDB, not here.
-const VERSION = 'pegged-shell-v1';
+const VERSION = 'pegged-shell-v3';
 
 const SHELL = [
   './',
@@ -13,8 +13,13 @@ const SHELL = [
   'src/gurs.js',
   'src/tiles.js',
   'src/store.js',
+  'src/measure.js',
+  'src/compass.js',
+  'src/sim.js',
   'src/ui/welcome.js',
   'src/ui/map.js',
+  'src/ui/measure.js',
+  'src/ui/log.js',
   'src/ui/settings.js',
   'icons/icon-180.png',
   'icons/icon-192.png',

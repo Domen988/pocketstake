@@ -135,6 +135,29 @@ export function setFoundFlag(eid, found) {
   return flags;
 }
 
+// --- measurement log (localStorage, spec: small) ----------------------------
+
+const LOG_KEY = 'pegged.log';
+
+export function loadLog() {
+  try {
+    return JSON.parse(safeGet(LOG_KEY) ?? '[]');
+  } catch {
+    return [];
+  }
+}
+
+export function appendLog(measurement) {
+  const log = loadLog();
+  log.push(measurement);
+  safeSet(LOG_KEY, JSON.stringify(log));
+  return log;
+}
+
+export function clearLog() {
+  safeSet(LOG_KEY, '[]');
+}
+
 // --- parcel data persistence (for offline use) ------------------------------
 
 export async function saveParcelData(parcel, points, segments) {

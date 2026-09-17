@@ -1,7 +1,7 @@
 // Map screen: canvas with WMS tiles, parcel/point overlays, live position,
 // pan/pinch, parcel tap + search, offline preparation.
 
-import { t, bus, geo, settings, persistSettings } from '../../app.js';
+import { t, bus, geo, settings, switchScreen } from '../../app.js';
 import { TileCache, tilesInBbox, TILE_M, prepareOfflineTiles, deleteOfflineTiles } from '../tiles.js';
 import {
   fetchParcelAtPoint,
@@ -345,8 +345,9 @@ function showPointCard(p) {
   el.querySelector('.close-x').addEventListener('click', hideCard);
   el.querySelector('#btn-goto').addEventListener('click', () => {
     if (red && !confirm(t('point.gotoRedConfirm'))) return;
-    bus.emit('target', p);
-    toast(t('measure.soon'));
+    hideCard();
+    bus.emit('target', { point: p, points: state.points });
+    switchScreen('measure');
   });
   el.querySelector('#btn-found').addEventListener('click', () => {
     p.foundPhysically = !p.foundPhysically;

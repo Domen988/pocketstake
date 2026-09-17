@@ -2,11 +2,14 @@
 
 import { fixFromPosition } from './src/proj.js';
 import { loadSettings, saveSettings } from './src/store.js';
+import { Simulator } from './src/sim.js';
 import { showWelcome } from './src/ui/welcome.js';
 import { initMap } from './src/ui/map.js';
+import { initMeasure } from './src/ui/measure.js';
+import { initLog } from './src/ui/log.js';
 import { initSettings } from './src/ui/settings.js';
 
-export const APP_VERSION = '0.1.0-phase1';
+export const APP_VERSION = '0.3.0-phase3';
 
 // --- i18n -------------------------------------------------------------------
 
@@ -63,18 +66,46 @@ export function persistSettings() {
 export const geo = {
   lastFix: null, // Fix in 3794
   watchId: null,
+  sim: null,
+  started: false,
   start() {
+    this.started = true;
+    if (settings.simulator.enabled) this._startSim();
+    else this._startGps();
+  },
+  /** Switch source after the simulator toggle changes. */
+  restart() {
+    if (!this.started) return;
+    this._stop();
+    this.start();
+  },
+  simWalk(dE, dN) {
+    this.sim?.walk(dE, dN);
+  },
+  _onFix(fix) {
+    if (fix.acc > 25) return; // spec 7.1: discard, no other rule
+    this.lastFix = fix;
+    bus.emit('fix', fix);
+  },
+  _startGps() {
     if (this.watchId !== null || !('geolocation' in navigator)) return;
     this.watchId = navigator.geolocation.watchPosition(
-      (pos) => {
-        const fix = fixFromPosition(pos, 'gps');
-        if (fix.acc > 25) return; // spec 7.1: discard, no other rule
-        this.lastFix = fix;
-        bus.emit('fix', fix);
-      },
+      (pos) => this._onFix(fixFromPosition(pos, 'gps')),
       (err) => bus.emit('geo-error', err),
       { enableHighAccuracy: true, maximumAge: 0, timeout: 10000 }
     );
+  },
+  _startSim() {
+    this.sim = new Simulator(settings.simulator);
+    this.sim.start((fix) => this._onFix(fix));
+  },
+  _stop() {
+    if (this.watchId !== null) {
+      navigator.geolocation.clearWatch(this.watchId);
+      this.watchId = null;
+    }
+    this.sim?.stop();
+    this.sim = null;
   },
 };
 
@@ -91,6 +122,10 @@ function initTabs() {
       bus.emit('screen', tab.dataset.screen);
     });
   });
+}
+
+export function switchScreen(name) {
+  document.querySelector(`#tabbar .tab[data-screen="${name}"]`)?.click();
 }
 
 // --- online indicator -------------------------------------------------------
@@ -118,6 +153,8 @@ async function boot() {
   initTabs();
   initNetIndicator();
   initMap();
+  initMeasure();
+  initLog();
   initSettings();
 
   document.getElementById('btn-help').addEventListener('click', () => showWelcome(() => {}));
