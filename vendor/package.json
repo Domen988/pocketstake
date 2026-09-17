@@ -1,0 +1,4 @@
+{
+  "comment": "Marks the vendored UMD build as CommonJS so Node tests can require() it despite the root \"type\": \"module\". Not used by the browser.",
+  "type": "commonjs"
+}

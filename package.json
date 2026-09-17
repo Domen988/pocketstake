@@ -1,0 +1,13 @@
+{
+  "name": "pocketstake",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Pegged — stakeout with your phone. PWA, no build step; this file exists only so node --test runs the ESM test files.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test 'test/*.test.js'",
+    "fixtures": "node scripts/fetch-fixtures.mjs",
+    "icons": "node scripts/make-icons.mjs"
+  },
+  "license": "MIT"
+}

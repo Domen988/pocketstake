@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "UREJENE_MEJE.1916619167",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            486434.98,
+            46474.16
+          ],
+          [
+            486445.84,
+            46488.27
+          ]
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "TOCKA_ID_ZAC": "159019166",
+        "TOCKA_ID_KON": "159019167",
+        "UPRAVNI_STATUSI_NAZIV_SL": "urejena"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "UREJENE_MEJE.1916714130",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            486445.84,
+            46488.27
+          ],
+          [
+            486456.14,
+            46481.96
+          ]
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "TOCKA_ID_ZAC": "159019167",
+        "TOCKA_ID_KON": "159014130",
+        "UPRAVNI_STATUSI_NAZIV_SL": "urejena"
+      }
+    }
+  ],
+  "totalFeatures": 2,
+  "numberMatched": 2,
+  "numberReturned": 2,
+  "timeStamp": "2026-09-17T00:00:00.000Z",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::3794"
+    }
+  }
+}

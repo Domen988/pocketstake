@@ -1,0 +1,249 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "TOCKE.159019167",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          486445.84,
+          46488.27
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "EID_TOCKA": "159019167",
+        "KO_ID": 1590,
+        "ST_TOCKE": "19167",
+        "E": 486445.84,
+        "N": 46488.27,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_SIFRA": 11,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_NAZIV_SL": "do vključno 10 cm",
+        "METODE_DOLOCITVE_POLOZAJA_SIFRA": 91,
+        "METODE_DOLOCITVE_POLOZAJA_NAZIV_SL": "terenska izmera",
+        "UPRAVNI_STATUSI_TOCK_SIFRA": 1,
+        "UPRAVNI_STATUSI_TOCK_NAZIV_SL": "urejena",
+        "NACINI_OZNACITVE_TOCK_NAZIV_SL": "mejnik"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "TOCKE.159014130",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          486456.14,
+          46481.96
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "EID_TOCKA": "159014130",
+        "KO_ID": 1590,
+        "ST_TOCKE": "14130",
+        "E": 486456.14,
+        "N": 46481.96,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_SIFRA": 11,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_NAZIV_SL": "do vključno 10 cm",
+        "METODE_DOLOCITVE_POLOZAJA_SIFRA": 91,
+        "METODE_DOLOCITVE_POLOZAJA_NAZIV_SL": "terenska izmera",
+        "UPRAVNI_STATUSI_TOCK_SIFRA": 1,
+        "UPRAVNI_STATUSI_TOCK_NAZIV_SL": "urejena",
+        "NACINI_OZNACITVE_TOCK_NAZIV_SL": "mejnik"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "TOCKE.159019166",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          486434.98,
+          46474.16
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "EID_TOCKA": "159019166",
+        "KO_ID": 1590,
+        "ST_TOCKE": "19166",
+        "E": 486434.98,
+        "N": 46474.16,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_SIFRA": 20,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_NAZIV_SL": "nad 10 cm do vključno 1 m",
+        "METODE_DOLOCITVE_POLOZAJA_SIFRA": 92,
+        "METODE_DOLOCITVE_POLOZAJA_NAZIV_SL": "terenska izmera",
+        "UPRAVNI_STATUSI_TOCK_SIFRA": 2,
+        "UPRAVNI_STATUSI_TOCK_NAZIV_SL": "delno urejena",
+        "NACINI_OZNACITVE_TOCK_NAZIV_SL": "mejnik"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "TOCKE.159014297",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          486434.74,
+          46471.4
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "EID_TOCKA": "159014297",
+        "KO_ID": 1590,
+        "ST_TOCKE": "14297",
+        "E": 486434.74,
+        "N": 46471.4,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_SIFRA": 99,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_NAZIV_SL": "ni določena",
+        "METODE_DOLOCITVE_POLOZAJA_SIFRA": 77,
+        "METODE_DOLOCITVE_POLOZAJA_NAZIV_SL": "homogenizacija",
+        "UPRAVNI_STATUSI_TOCK_SIFRA": 4,
+        "UPRAVNI_STATUSI_TOCK_NAZIV_SL": "tehnična",
+        "NACINI_OZNACITVE_TOCK_NAZIV_SL": "ni označena"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "TOCKE.159014298",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          486433.84,
+          46465.27
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "EID_TOCKA": "159014298",
+        "KO_ID": 1590,
+        "ST_TOCKE": "14298",
+        "E": 486433.84,
+        "N": 46465.27,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_SIFRA": 99,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_NAZIV_SL": "ni določena",
+        "METODE_DOLOCITVE_POLOZAJA_SIFRA": 77,
+        "METODE_DOLOCITVE_POLOZAJA_NAZIV_SL": "homogenizacija",
+        "UPRAVNI_STATUSI_TOCK_SIFRA": 4,
+        "UPRAVNI_STATUSI_TOCK_NAZIV_SL": "tehnična",
+        "NACINI_OZNACITVE_TOCK_NAZIV_SL": "ni označena"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "TOCKE.159014299",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          486455.8,
+          46463.33
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "EID_TOCKA": "159014299",
+        "KO_ID": 1590,
+        "ST_TOCKE": "14299",
+        "E": 486455.8,
+        "N": 46463.33,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_SIFRA": 99,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_NAZIV_SL": "ni določena",
+        "METODE_DOLOCITVE_POLOZAJA_SIFRA": 77,
+        "METODE_DOLOCITVE_POLOZAJA_NAZIV_SL": "homogenizacija",
+        "UPRAVNI_STATUSI_TOCK_SIFRA": 4,
+        "UPRAVNI_STATUSI_TOCK_NAZIV_SL": "tehnična",
+        "NACINI_OZNACITVE_TOCK_NAZIV_SL": "ni označena"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "TOCKE.159014305",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          486461.24,
+          46462.82
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "EID_TOCKA": "159014305",
+        "KO_ID": 1590,
+        "ST_TOCKE": "14305",
+        "E": 486461.24,
+        "N": 46462.82,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_SIFRA": 99,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_NAZIV_SL": "ni določena",
+        "METODE_DOLOCITVE_POLOZAJA_SIFRA": 77,
+        "METODE_DOLOCITVE_POLOZAJA_NAZIV_SL": "homogenizacija",
+        "UPRAVNI_STATUSI_TOCK_SIFRA": 4,
+        "UPRAVNI_STATUSI_TOCK_NAZIV_SL": "tehnična",
+        "NACINI_OZNACITVE_TOCK_NAZIV_SL": "ni označena"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "TOCKE.159014129",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          486461.26,
+          46470.82
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "EID_TOCKA": "159014129",
+        "KO_ID": 1590,
+        "ST_TOCKE": "14129",
+        "E": 486461.26,
+        "N": 46470.82,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_SIFRA": 99,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_NAZIV_SL": "ni določena",
+        "METODE_DOLOCITVE_POLOZAJA_SIFRA": 77,
+        "METODE_DOLOCITVE_POLOZAJA_NAZIV_SL": "homogenizacija",
+        "UPRAVNI_STATUSI_TOCK_SIFRA": 4,
+        "UPRAVNI_STATUSI_TOCK_NAZIV_SL": "tehnična",
+        "NACINI_OZNACITVE_TOCK_NAZIV_SL": "ni označena"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "TOCKE.159014128",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          486468.03,
+          46470.71
+        ]
+      },
+      "geometry_name": "GEOM",
+      "properties": {
+        "EID_TOCKA": "159014128",
+        "KO_ID": 1590,
+        "ST_TOCKE": "14128",
+        "E": 486468.03,
+        "N": 46470.71,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_SIFRA": 99,
+        "NATANCNOSTI_DOLOCITVE_POLOZAJA_NAZIV_SL": "ni določena",
+        "METODE_DOLOCITVE_POLOZAJA_SIFRA": 77,
+        "METODE_DOLOCITVE_POLOZAJA_NAZIV_SL": "homogenizacija",
+        "UPRAVNI_STATUSI_TOCK_SIFRA": 4,
+        "UPRAVNI_STATUSI_TOCK_NAZIV_SL": "tehnična",
+        "NACINI_OZNACITVE_TOCK_NAZIV_SL": "ni označena"
+      }
+    }
+  ],
+  "totalFeatures": 9,
+  "numberMatched": 9,
+  "numberReturned": 9,
+  "timeStamp": "2026-09-17T00:00:00.000Z",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::3794"
+    }
+  }
+}
