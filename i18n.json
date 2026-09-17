@@ -7,20 +7,39 @@
     "tab.settings": "Settings",
     "online": "online",
     "offline": "offline",
-
     "welcome.title": "Before you measure",
     "welcome.steps": [
-      { "t": "Open sky.", "d": "Away from walls, trees and the car. If the accuracy number stays above 8 m, move." },
-      { "t": "Phone on the ground.", "d": "Put it on the point or a stick, screen up, and do not touch it while it averages." },
-      { "t": "Wait for “stable”.", "d": "At least 90 seconds. Stable means the reading stopped moving, not that it is correct." },
-      { "t": "Calibrate first.", "d": "Average on a marker you know (a green point with a real mejnik). Later measurements are corrected by that offset." },
-      { "t": "Close the loop.", "d": "Return to the marker after each target. If the offset changed more than 0.3 m, repeat the target." },
-      { "t": "Trust the colour.", "d": "Green ≤ 10 cm, yellow ≤ 1 m, red unknown. Only green is worth taping to." },
-      { "t": "Mark before you move.", "d": "Plant a stick where the phone lay, then tape from it along the arrow." }
+      {
+        "t": "Open sky.",
+        "d": "Away from walls, trees and the car. If the accuracy number stays above 8 m, move."
+      },
+      {
+        "t": "Phone on the ground.",
+        "d": "Put it on the point or a stick, screen up, and do not touch it while it averages."
+      },
+      {
+        "t": "Wait for “stable”.",
+        "d": "At least 90 seconds. Stable means the reading stopped moving, not that it is correct."
+      },
+      {
+        "t": "Calibrate first.",
+        "d": "Average on a marker you know (a green point with a real mejnik). Later measurements are corrected by that offset."
+      },
+      {
+        "t": "Close the loop.",
+        "d": "Return to the marker after each target. If the offset changed more than 0.3 m, repeat the target."
+      },
+      {
+        "t": "Trust the colour.",
+        "d": "Green ≤ 10 cm, yellow ≤ 1 m, red unknown. Only green is worth taping to."
+      },
+      {
+        "t": "Mark before you move.",
+        "d": "Plant a stick where the phone lay, then tape from it along the arrow."
+      }
     ],
     "welcome.footer": "This finds where the cadastre says a point is. Only a geodet can establish a boundary.",
     "welcome.start": "Start",
-
     "map.search": "Search",
     "map.searchTitle": "Find parcel",
     "map.koId": "KO id",
@@ -33,7 +52,6 @@
     "map.recentre": "Re-centre",
     "map.noFix": "waiting for GPS…",
     "map.noMapData": "no map data here",
-
     "parcel.area": "Area",
     "parcel.status": "Status",
     "parcel.points": "Points",
@@ -41,7 +59,6 @@
     "parcel.preparing": "Preparing… {done}/{total}",
     "parcel.prepared": "Stored for offline ({mb} MB).",
     "parcel.prepareFailed": "Offline preparation failed.",
-
     "point.title": "Point",
     "point.accuracy": "Accuracy",
     "point.acc.11": "within 10 cm (95 %)",
@@ -58,7 +75,6 @@
     "point.markFound": "Mark as found",
     "point.foundYes": "Found ✓ (usable as calibration reference)",
     "point.unmarkFound": "Unmark found",
-
     "measure.target": "Target",
     "measure.noTarget": "No target — pick a point on the Map and tap Go to. Start averaging still works and records your position.",
     "measure.freeAveraging": "position average (no target)",
@@ -99,7 +115,6 @@
     "settings.sim.rate": "Rate (Hz)",
     "settings.sim.ar1": "Correlation (AR1)",
     "settings.sim.walk": "Walk (1 m)",
-
     "settings.title": "Settings",
     "settings.language": "Language",
     "settings.lang.en": "English",
@@ -107,6 +122,9 @@
     "settings.stability": "Stability threshold",
     "settings.vertexTol": "Vertex match tolerance (cm)",
     "settings.testMode": "Test mode",
+    "settings.mapOverlay": "Map overlay",
+    "settings.showAccCircle": "Accuracy circle (± m)",
+    "settings.showFixTrail": "Show GPS fixes (spread)",
     "settings.simulator": "Simulator",
     "settings.phase3": "arrives in phase 3",
     "settings.phase5": "arrives in phase 5",
@@ -118,7 +136,6 @@
     "settings.version": "Version",
     "settings.repo": "Repository",
     "settings.disclaimer": "Pegged finds where the cadastre says a point is. Only a geodet can establish a boundary.",
-
     "acc.label": "GPS",
     "wakeLock.hint": "Keep the screen on while measuring — this phone does not support automatic wake lock."
   },
@@ -130,20 +147,39 @@
     "tab.settings": "Nastavitve",
     "online": "povezan",
     "offline": "brez povezave",
-
     "welcome.title": "Preden meriš",
     "welcome.steps": [
-      { "t": "Odprto nebo.", "d": "Stran od zidov, dreves in avta. Če natančnost vztraja nad 8 m, se premakni." },
-      { "t": "Telefon na tla.", "d": "Položi ga na točko ali količek, zaslon navzgor, in se ga med povprečenjem ne dotikaj." },
-      { "t": "Počakaj na »stabilno«.", "d": "Vsaj 90 sekund. Stabilno pomeni, da se odčitek ne premika več, ne da je pravilen." },
-      { "t": "Najprej kalibriraj.", "d": "Povpreči na mejniku, ki ga poznaš (zelena točka s pravim mejnikom). Nadaljnje meritve se popravijo za ta odmik." },
-      { "t": "Zapri zanko.", "d": "Po vsaki tarči se vrni na mejnik. Če se je odmik spremenil za več kot 0,3 m, tarčo ponovi." },
-      { "t": "Zaupaj barvi.", "d": "Zelena ≤ 10 cm, rumena ≤ 1 m, rdeča neznano. Samo zeleno je vredno zakoličiti." },
-      { "t": "Označi, preden se premakneš.", "d": "Zapiči količek, kjer je ležal telefon, nato meri s trakom po puščici." }
+      {
+        "t": "Odprto nebo.",
+        "d": "Stran od zidov, dreves in avta. Če natančnost vztraja nad 8 m, se premakni."
+      },
+      {
+        "t": "Telefon na tla.",
+        "d": "Položi ga na točko ali količek, zaslon navzgor, in se ga med povprečenjem ne dotikaj."
+      },
+      {
+        "t": "Počakaj na »stabilno«.",
+        "d": "Vsaj 90 sekund. Stabilno pomeni, da se odčitek ne premika več, ne da je pravilen."
+      },
+      {
+        "t": "Najprej kalibriraj.",
+        "d": "Povpreči na mejniku, ki ga poznaš (zelena točka s pravim mejnikom). Nadaljnje meritve se popravijo za ta odmik."
+      },
+      {
+        "t": "Zapri zanko.",
+        "d": "Po vsaki tarči se vrni na mejnik. Če se je odmik spremenil za več kot 0,3 m, tarčo ponovi."
+      },
+      {
+        "t": "Zaupaj barvi.",
+        "d": "Zelena ≤ 10 cm, rumena ≤ 1 m, rdeča neznano. Samo zeleno je vredno zakoličiti."
+      },
+      {
+        "t": "Označi, preden se premakneš.",
+        "d": "Zapiči količek, kjer je ležal telefon, nato meri s trakom po puščici."
+      }
     ],
     "welcome.footer": "Aplikacija pokaže, kje je točka po katastru. Mejo lahko določi samo geodet.",
     "welcome.start": "Začni",
-
     "map.search": "Išči",
     "map.searchTitle": "Najdi parcelo",
     "map.koId": "Šifra KO",
@@ -156,7 +192,6 @@
     "map.recentre": "Na sredino",
     "map.noFix": "čakam na GPS…",
     "map.noMapData": "tu ni podatkov karte",
-
     "parcel.area": "Površina",
     "parcel.status": "Status",
     "parcel.points": "Točke",
@@ -164,7 +199,6 @@
     "parcel.preparing": "Pripravljam… {done}/{total}",
     "parcel.prepared": "Shranjeno za offline ({mb} MB).",
     "parcel.prepareFailed": "Priprava za offline ni uspela.",
-
     "point.title": "Točka",
     "point.accuracy": "Natančnost",
     "point.acc.11": "do 10 cm (95 %)",
@@ -181,7 +215,6 @@
     "point.markFound": "Označi kot najdeno",
     "point.foundYes": "Najdena ✓ (uporabna za kalibracijo)",
     "point.unmarkFound": "Odznači najdeno",
-
     "measure.target": "Tarča",
     "measure.noTarget": "Ni tarče — na Karti izberi točko in tapni Vodi me. Povprečenje deluje tudi brez tarče in zabeleži tvoj položaj.",
     "measure.freeAveraging": "povprečje položaja (brez tarče)",
@@ -222,7 +255,6 @@
     "settings.sim.rate": "Frekvenca (Hz)",
     "settings.sim.ar1": "Korelacija (AR1)",
     "settings.sim.walk": "Hoja (1 m)",
-
     "settings.title": "Nastavitve",
     "settings.language": "Jezik",
     "settings.lang.en": "English",
@@ -230,6 +262,9 @@
     "settings.stability": "Prag stabilnosti",
     "settings.vertexTol": "Toleranca ujemanja točk (cm)",
     "settings.testMode": "Testni način",
+    "settings.mapOverlay": "Prikaz na karti",
+    "settings.showAccCircle": "Krog natančnosti (± m)",
+    "settings.showFixTrail": "Pokaži GPS meritve (raztros)",
     "settings.simulator": "Simulator",
     "settings.phase3": "pride v fazi 3",
     "settings.phase5": "pride v fazi 5",
@@ -241,7 +276,6 @@
     "settings.version": "Različica",
     "settings.repo": "Repozitorij",
     "settings.disclaimer": "Pegged pokaže, kje je točka po katastru. Mejo lahko določi samo geodet.",
-
     "acc.label": "GPS",
     "wakeLock.hint": "Med merjenjem naj zaslon ostane prižgan — ta telefon ne podpira samodejnega zaklepa bujenja."
   }

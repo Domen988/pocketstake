@@ -57,6 +57,16 @@ async function render() {
       <input id="set-test" type="checkbox" style="width:26px;height:26px" />
     </div>
 
+    <h2>${t('settings.mapOverlay')}</h2>
+    <div class="set-row">
+      <span>${t('settings.showAccCircle')}</span>
+      <input id="set-acc-circle" type="checkbox" style="width:26px;height:26px" />
+    </div>
+    <div class="set-row">
+      <span>${t('settings.showFixTrail')}</span>
+      <input id="set-fix-trail" type="checkbox" style="width:26px;height:26px" />
+    </div>
+
     <h2>${t('settings.simulator')}</h2>
     <div class="set-row">
       <span>${t('settings.simulator')}</span>
@@ -136,6 +146,18 @@ async function render() {
     settings.testMode = testChk.checked;
     persistSettings();
   });
+
+  for (const [id, key] of [
+    ['#set-acc-circle', 'showAccCircle'],
+    ['#set-fix-trail', 'showFixTrail'],
+  ]) {
+    const chk = root.querySelector(id);
+    chk.checked = settings[key];
+    chk.addEventListener('change', () => {
+      settings[key] = chk.checked;
+      persistSettings();
+    });
+  }
 
   const simChk = root.querySelector('#set-sim');
   simChk.checked = settings.simulator.enabled;

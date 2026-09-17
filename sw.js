@@ -1,5 +1,5 @@
 // App-shell cache. Data (tiles, parcels) lives in IndexedDB, not here.
-const VERSION = 'pegged-shell-v3';
+const VERSION = 'pegged-shell-v4';
 
 const SHELL = [
   './',

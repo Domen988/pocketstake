@@ -9,7 +9,7 @@ import { initMeasure } from './src/ui/measure.js';
 import { initLog } from './src/ui/log.js';
 import { initSettings } from './src/ui/settings.js';
 
-export const APP_VERSION = '0.3.0-phase3';
+export const APP_VERSION = '0.3.1';
 
 // --- i18n -------------------------------------------------------------------
 

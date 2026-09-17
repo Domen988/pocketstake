@@ -142,7 +142,7 @@ function drawArrowBox(bearingTrue) {
   const x2 = cx + r * Math.sin(a2), y2 = cy - r * Math.cos(a2);
   const large = w > 90 ? 1 : 0;
   box.innerHTML = `
-    <svg width="120" height="120" viewBox="0 0 120 120">
+    <svg width="96" height="96" viewBox="0 0 120 120">
       <circle cx="60" cy="60" r="56" fill="none" stroke="#2a3644" stroke-width="1.5"/>
       <path d="M ${cx} ${cy} L ${x1.toFixed(1)} ${y1.toFixed(1)} A ${r} ${r} 0 ${large} 1 ${x2.toFixed(1)} ${y2.toFixed(1)} Z"
             fill="rgba(77,163,255,0.18)"/>
@@ -213,6 +213,7 @@ function renderAveraging() {
 function updateAveraging() {
   if (!st.avg) return;
   const s = st.avg.snapshot(Date.now());
+  bus.emit('avg-state', s); // the Map draws the running mean + shrinking ± circle
 
   if (st.active && st.mode === 'averaging') {
     const grid = document.getElementById('m-grid');
@@ -313,10 +314,12 @@ function renderResult() {
   document.getElementById('btn-save').addEventListener('click', () => {
     appendLog(st.result);
     bus.emit('log-updated');
+    bus.emit('avg-state', null);
     st.mode = 'approach';
     render();
   });
   document.getElementById('btn-again').addEventListener('click', () => {
+    bus.emit('avg-state', null);
     st.mode = 'approach';
     render();
   });

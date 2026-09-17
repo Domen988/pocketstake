@@ -54,6 +54,8 @@ export const DEFAULT_SETTINGS = {
   lang: null, // null -> from navigator.language
   stabilityThreshold: 0.5, // m; 0.3 | 0.5 | 1.0
   vertexTolCm: 1, // parcel vertex matching tolerance, centimetres
+  showAccCircle: true, // ± circle around the live position on the map
+  showFixTrail: true, // individual GPS fixes on the map (spread)
   testMode: false,
   simulator: {
     enabled: false,

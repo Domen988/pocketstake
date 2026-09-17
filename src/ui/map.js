@@ -31,6 +31,8 @@ const state = {
   points: [],
   segments: [],
   tiles: new TileCache(),
+  trail: [], // recent fixes, drawn to show the GPS spread
+  avgSnap: null, // live averaging snapshot while the Measure tab averages
   dirty: true,
 };
 
@@ -60,7 +62,13 @@ export function initMap() {
       state.view.N = fix.N;
     }
     state.hadFirstFix = true;
+    state.trail.push(fix);
+    if (state.trail.length > 300) state.trail.splice(0, state.trail.length - 300);
     updateAccChip(fix);
+    invalidate();
+  });
+  bus.on('avg-state', (snap) => {
+    state.avgSnap = snap;
     invalidate();
   });
   bus.on('geo-error', () => {
@@ -555,15 +563,31 @@ function drawPosition(ctx) {
   const fix = geo.lastFix;
   if (!fix) return;
   const { dpr, view } = state;
+
+  if (settings.showFixTrail) {
+    // individual fixes, newest brightest, so the spread is visible on the map
+    const n = state.trail.length;
+    for (let i = 0; i < n; i++) {
+      const f = state.trail[i];
+      const [fx, fy] = toScreen(f.E, f.N);
+      ctx.beginPath();
+      ctx.arc(fx, fy, 2 * dpr, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(143, 208, 255, ${(0.1 + 0.4 * ((i + 1) / n)).toFixed(3)})`;
+      ctx.fill();
+    }
+  }
+
   const [x, y] = toScreen(fix.E, fix.N);
-  const rAcc = fix.acc * view.scale * dpr;
-  ctx.beginPath();
-  ctx.arc(x, y, rAcc, 0, Math.PI * 2);
-  ctx.fillStyle = 'rgba(77,163,255,0.12)';
-  ctx.fill();
-  ctx.strokeStyle = 'rgba(77,163,255,0.5)';
-  ctx.lineWidth = 1 * dpr;
-  ctx.stroke();
+  if (settings.showAccCircle) {
+    const rAcc = fix.acc * view.scale * dpr;
+    ctx.beginPath();
+    ctx.arc(x, y, rAcc, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(77,163,255,0.12)';
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(77,163,255,0.5)';
+    ctx.lineWidth = 1 * dpr;
+    ctx.stroke();
+  }
   ctx.beginPath();
   ctx.arc(x, y, 6 * dpr, 0, Math.PI * 2);
   ctx.fillStyle = '#4da3ff';
@@ -571,6 +595,24 @@ function drawPosition(ctx) {
   ctx.strokeStyle = '#fff';
   ctx.lineWidth = 2 * dpr;
   ctx.stroke();
+
+  // live averaging overlay: running mean with its shrinking ±2·SEM circle
+  const s = state.avgSnap;
+  if (s?.meanE != null) {
+    const [mx, my] = toScreen(s.meanE, s.meanN);
+    const colour = s.stable ? '#38c172' : '#f2c744';
+    if (s.sem != null && settings.showAccCircle) {
+      ctx.beginPath();
+      ctx.arc(mx, my, Math.max(2 * s.sem * view.scale * dpr, 3 * dpr), 0, Math.PI * 2);
+      ctx.strokeStyle = colour;
+      ctx.lineWidth = 2 * dpr;
+      ctx.stroke();
+    }
+    ctx.beginPath();
+    ctx.arc(mx, my, 4.5 * dpr, 0, Math.PI * 2);
+    ctx.fillStyle = colour;
+    ctx.fill();
+  }
 }
 
 function updateScaleBar() {
