@@ -3,40 +3,95 @@
   "features": [
     {
       "type": "Feature",
-      "id": "PARCELE.15903319",
+      "id": "PARCELE.100100001391096083",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [486445.84, 46488.27],
-            [486456.14, 46481.96],
-            [486461.26, 46470.82],
-            [486468.03, 46470.71],
-            [486461.24, 46462.82],
-            [486455.8, 46463.33],
-            [486433.84, 46465.27],
-            [486434.74, 46471.4],
-            [486434.98, 46474.16],
-            [486445.84, 46488.27]
+            [
+              486434.74,
+              46471.4
+            ],
+            [
+              486433.84,
+              46465.27
+            ],
+            [
+              486455.8,
+              46463.33
+            ],
+            [
+              486461.24,
+              46462.82
+            ],
+            [
+              486461.26,
+              46470.82
+            ],
+            [
+              486468.03,
+              46470.71
+            ],
+            [
+              486456.14,
+              46481.96
+            ],
+            [
+              486445.84,
+              46488.27
+            ],
+            [
+              486434.98,
+              46474.16
+            ],
+            [
+              486434.74,
+              46471.4
+            ]
           ]
         ]
       },
       "geometry_name": "GEOM",
       "properties": {
-        "EID_PARCELA": "15903319",
+        "FEATUREID": 100100001391096080,
+        "EID": "100100001391096083",
+        "EID_PARCELA": "100100001391096083",
+        "PARCELA_ID": 139109608,
         "KO_ID": 1590,
-        "NAZIV": "Kočevska Reka",
+        "NAZIV": "1590 KOČEVSKA REKA",
         "ST_PARCELE": "3319",
         "POVRSINA": 493,
+        "DOLOCITEV_POVRSINE": 0,
+        "METODE_DOLOCITVE_POVRSINE_SIFRA": 0,
+        "METODE_DOLOCITVE_POVRSINE_NAZIV_SL": "ni podatka",
+        "UPRAVNI_STATUS_ID": 1,
+        "UPRAVNI_STATUSI_SIFRA": 1,
         "UPRAVNI_STATUSI_NAZIV_SL": "ni urejena",
-        "E_CEN": 486449.6,
-        "N_CEN": 46471.9
-      }
+        "E_CEN": 486450.94,
+        "N_CEN": 46475.55,
+        "DATUM_SYS": "2026-04-16T15:39:18Z",
+        "BONITETA": 23,
+        "ZNESEK_KD": 3.55,
+        "SKUPNI_DEL_ETAZNA_LASTNINA_NAZIV_SL": "Ne",
+        "GRAD_PARC": "Ne",
+        "OMEJITEV": "Ne"
+      },
+      "bbox": [
+        486433.84,
+        46462.82,
+        486468.03,
+        46488.27
+      ]
     }
   ],
   "totalFeatures": 1,
   "numberMatched": 1,
   "numberReturned": 1,
-  "timeStamp": "2026-09-17T00:00:00.000Z",
-  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3794" } }
+  "timeStamp": "2026-09-20T08:44:00.147Z",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::3794"
+    }
+  }
 }
